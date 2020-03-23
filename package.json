@@ -1,0 +1,30 @@
+{
+  "name": "envision",
+  "version": "1.0.0",
+  "description": "\"\"\u001b[DA #D \u001b[D\u001b[3\u001b[C Visualizer \"\u001b[Dfor product\"",
+  "main": "index.js",
+  "engines": {
+    "node": "12.13.0",
+    "npm": "6.12.0"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev":"nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudhir9297/Envision.git"
+  },
+  "author": "sudhir9297",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sudhir9297/Envision/issues"
+  },
+  "homepage": "https://github.com/sudhir9297/Envision#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  }
+}
