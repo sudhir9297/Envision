@@ -24,12 +24,14 @@
   },
   "homepage": "https://github.com/sudhir9297/Envision#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "concurrently": "^5.1.0",
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
     "mongoose": "^5.9.6",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
-    "passport-google-oauth20": "^2.0.0"
+    "passport-google-oauth20": "^2.0.0",
+    "redux-thunk": "^2.3.0"
   }
 }

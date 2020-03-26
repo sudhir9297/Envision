@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import {connect} from 'react-redux'
+import {setCurrentUserAction} from './redux/user/user.action'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="/auth/google"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          SignIN
-        </a>
-      </header>
-    </div>
-  );
+import { BrowserRouter, Route } from "react-router-dom";
+
+import Header from './components/header/header.component'
+
+const Landing = () => <h2>Landing</h2>;
+const Selection = () => <h2>Selection</h2>;
+const Survey = () => <h2>survey</h2>;
+
+class App extends Component {
+  componentDidMount(){
+    this.props.currentUser()
+  }
+
+  render(){
+
+    return (
+      <div>
+        <BrowserRouter>
+          <Header/>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/selection" component={Selection} />
+          <Route exact path="/survey" component={Survey} />
+        </BrowserRouter>
+      </div>
+    );
+  }
+
 }
 
-export default App;
+const mapDispatcToProps=(dispatch)=>({
+  currentUser:()=>dispatch(setCurrentUserAction())
+});
+
+export default connect(null,mapDispatcToProps)(App);
