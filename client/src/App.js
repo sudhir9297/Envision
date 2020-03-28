@@ -32,8 +32,8 @@ class App extends Component {
 
 }
 
-const mapDispatcToProps=(dispatch)=>({
+const mapDispatchToProps=(dispatch)=>({
   currentUser:()=>dispatch(setCurrentUserAction())
 });
 
-export default connect(null,mapDispatcToProps)(App);
+export default connect(null,mapDispatchToProps)(App);
