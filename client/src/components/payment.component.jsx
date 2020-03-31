@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import StripeCheckout from 'react-stripe-checkout'
-import {handelToken} from '../../redux/user/user.action'
+import {handelToken} from '../redux/user/user.action'
 
 class Payments extends React.Component {
 

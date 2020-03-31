@@ -5,7 +5,7 @@ import {setCurrentUserAction} from './redux/user/user.action'
 
 import { BrowserRouter, Route } from "react-router-dom";
 
-import Header from './components/header/header.component'
+import Header from './components/header.component'
 
 const Landing = () => <h2>Landing</h2>;
 const Selection = () => <h2>Selection</h2>;
