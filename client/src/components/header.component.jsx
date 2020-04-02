@@ -33,7 +33,7 @@ class Header extends React.Component {
       <HeaderContainer>
         <TopOptions>
           <Logo />
-          <CustomBtn Text="Create New Survey" path="/newSurvey" />
+          <CustomBtn Text="Create New Survey" path="/Survey/new" />
 
           {this.state.LinkList.map(i => (
             <CustomLink key={i.id} name={i.name} path={i.path} />
@@ -69,4 +69,3 @@ const TopOptions = styled.div`
   align-items: center;
   justify-content: flex-start;
 `;
-
