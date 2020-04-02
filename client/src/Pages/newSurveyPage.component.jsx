@@ -6,7 +6,7 @@ class SurveyPage extends React.Component {
     render(){
         return(
             <div>
-                here the Form will come
+                Forms for survey
             </div>
         )
     }
