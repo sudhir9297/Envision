@@ -1,46 +1,39 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "react-router-dom";
-import { IoIosAddCircle } from "react-icons/io";
+import React from 'react';
+import styled from 'styled-components';
 
-var IconToShow={}
+const CustomButton=({children,...otherprops})=>(
+    <Button {...otherprops}>
+        {children}
+    </Button>
+)
 
-const CustomBtn = ({Text,path}) => {
+export default CustomButton;
 
-  switch (Text) {
-    case "Create New Survey":
-      IconToShow =  <IoIosAddCircle size="40px" color="#4086F4" />
-      break;
-    default:
-      return;
-  }
+const Button=styled.button`
+    min-width: 165px;
+    width: auto;
+    height: 50px;
+    letter-spacing: 0.5px;
+    padding: 0 35px 0 35px;
+    font-size: 15px;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed';
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    background-color: ${props=>props.color};
+    border-radius:4px;
+    transition: all .2s ease-in-out;
 
-  return (
-    <BtnContainer to={path}>
-      <Name>{Text}</Name>
-      {IconToShow}
-    </BtnContainer>
-  );
-};
+  
+    &:hover {
+        background-color: ${props=>props.color};
+        border: none;
+        transform: scale(1.1); 
+        
+    }
 
-export default CustomBtn;
-
-const BtnContainer = styled(Link)`
-  height: 70px;
-  width: 80%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 24px 0;
-  background-color: #f5f6fa;
-  border-radius: 8px;
-  text-decoration: none;
-`;
-
-const Name = styled.div`
-  width: 60%;
-  height: auto;
-  font-size: 14px;
-  font-weight: 600;
-  color: #373736;
-`;
+`

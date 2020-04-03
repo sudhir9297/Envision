@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { connect } from "react-redux";
 
 import Logo from "./Logo.component";
-import CustomBtn from "./CustomBtn.component";
+import CustomBtn from "./CustomBtnWithImage.component";
 import CustomLink from "./CustomOptions.component";
 import ProfileIcon from "./profile.component";
 

@@ -63,7 +63,7 @@ const ImageContainer = styled.div`
     width: 26px;
     height: 26px;
     border-radius: 50%;
-    border: 1px solid #68a361;
+    border: 1px solid #4285f4;
     padding: 2px;
   }
 `;
@@ -79,12 +79,14 @@ const Username = styled.div`
   font-weight: 600;
   width: 40px;
   text-overflow: ellipsis;
+  color: #4285f4;
 `;
 const Email = styled.div`
   font-size: 10px;
   font-weight: 400;
   width: 100%;
   text-overflow: ellipsis;
+  color: gray;
 `;
 
 const CreditsContainer = styled.div`
@@ -97,7 +99,7 @@ const Credits = styled.div`
   margin-right: 8px;
   font-size: 14px;
   font-weight: 500;
-  color: #eb4132;
+  color: #4285f4;
 `;
 
 const Digits = styled.div`

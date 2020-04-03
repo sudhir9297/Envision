@@ -8,16 +8,16 @@ var IconToShow = {};
 const CustomLinks = ({ name, path }) => {
   switch (name) {
     case "DashBoard":
-      IconToShow = <MdDashboard color="#F0633A" size="22px" />;
+      IconToShow = <MdDashboard color="#4285f4" size="22px" />;
       break;
     case "Survey List":
-      IconToShow = <IoIosList color="#F0633A" size="22px"/>;
+      IconToShow = <IoIosList color="#4285f4" size="22px"/>;
       break;
     case "Contact Us":
-      IconToShow = <MdEmail color="#F0633A" size="22px" />;
+      IconToShow = <MdEmail color="#4285f4" size="22px" />;
       break;
     case "Setting":
-      IconToShow = <IoMdSettings color="#F0633A" size="22px"/>;
+      IconToShow = <IoMdSettings color="#4285f4" size="22px"/>;
       break;
     default:
       return;
