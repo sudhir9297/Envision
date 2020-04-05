@@ -1,14 +1,33 @@
 import React from 'react'
+import { connect } from "react-redux";
+import {fetchSurveysAction}  from '../redux/survey/survey.action'
+
+import SurveysList from '../components/surveysContainer.component'
 
 class SurveyPage extends React.Component {
+    componentDidMount(){
+        this.props.suryeysList()
+    }
 
-    render(){
-        return(
+    render() {
+       const {Surveys} = this.props
+        
+        return (
             <div>
-                SurveyPage
+             {Surveys.map((item)=><SurveysList key={item._id} item={item}/>
+             )}
             </div>
         )
     }
 }
+const mapStateToProps = ({ survey: { Surveys } }) => ({
+    Surveys
+});
 
-export default SurveyPage
+
+const mapDispatchToProps = dispatch => ({
+    suryeysList: () => dispatch(fetchSurveysAction())
+  });
+  
+  
+export default connect(mapStateToProps,mapDispatchToProps)(SurveyPage)

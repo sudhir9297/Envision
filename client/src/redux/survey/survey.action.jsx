@@ -8,6 +8,12 @@ export const SurveyActionHandle = item=> ( {
 
 export const SendSurveyActionHandle = (item,history) => async dispatch => {
   history.push('/surveys')
-  const result = await axios.post("/api/surveys", item);
+  await axios.post("/api/surveys", item);
   
 };
+
+export const fetchSurveysAction = () => async dispatch => {
+ const res= await axios.get("/api/surveys");
+  dispatch({type:SurveyActionTypes.FETCH_SURVEYS,payload:res.data})
+};
+
